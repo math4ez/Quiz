@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz - aula 05</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Cerebral | Desafie Seu Conhecimento</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Header -->
+    <header class="app-header">
+      <div class="header-content">
+        <h1 class="logo animate__animated animate__fadeInDown">
+          <span class="logo-icon">🧠</span> Quiz Cerebral - Imersão Dev 2025
+        </h1>
+        <div class="theme-switcher">
+          <button id="themeToggle" aria-label="Alternar tema" class="theme-btn">
+            <span class="moon"><i class="fas fa-moon"></i></span>
+            <span class="sun"><i class="fas fa-sun"></i></span>
+          </button>
+        </div>
+      </div>
+    </header>
+    
+    <!-- Particulas -->
+    <div id="particles-js"></div>
+
+    <!-- Main Content -->
+    <main class="app-main">
+      <!-- Tela Inicial -->
+      <section class="screen home-screen active" id="homeScreen">
+        <div class="screen-content">
+          <div class="welcome-message animate__animated animate__fadeIn">
+            <h2 class="screen-title">Desafie Seu Conhecimento</h2>
+            <p class="screen-subtitle">Explore diversos temas e teste sua expertise</p>
+          </div>
+          
+          <!-- CATEGORIAS DISPONIVEIS  -->
+          
+<div class="categories-section">
+  <h3 class="section-title"><i class="fas fa-layer-group"></i> Categorias Disponíveis</h3>
+  <div class="categories-grid">
+    <div class="category-card" data-category="geral">
+      <div class="category-icon"><i class="fas fa-globe-americas"></i></div>
+      <h3 class="category-title">Conhecimento Geral</h3>
+      <div class="category-progress">
+        <div class="progress-bar" data-progress="0"></div>
+      </div>
+    </div>
+    
+    <div class="category-card" data-category="historia">
+      <div class="category-icon"><i class="fas fa-landmark"></i></div>
+      <h3 class="category-title">Jornada Histórica</h3>
+      <div class="category-progress">
+        <div class="progress-bar" data-progress="0"></div>
+      </div>
+    </div>
+  
+    <div class="category-card" data-category="tecnologia">
+      <div class="category-icon"><i class="fas fa-microchip"></i></div>
+      <h3 class="category-title">Universo Tecnológico</h3>
+      <div class="category-progress">
+        <div class="progress-bar" data-progress="0"></div>
+      </div>
+    </div>
+    
+    <div class="category-card" data-category="esportes">
+      <div class="category-icon"><i class="fas fa-trophy"></i></div>
+      <h3 class="category-title">Arena dos Esportes</h3>
+      <div class="category-progress">
+        <div class="progress-bar" data-progress="0"></div>
+      </div>
+    </div>
+    
+    <div class="category-card" data-category="geografia">
+      <div class="category-icon"><i class="fas fa-map-marked-alt"></i></div>
+      <h3 class="category-title">Exploração Geográfica</h3>
+      <div class="category-progress">
+        <div class="progress-bar" data-progress="0"></div>
+      </div>
+    </div>
+    
+    <div class="category-card" data-category="entretenimento">
+      <div class="category-icon"><i class="fas fa-film"></i></div>
+      <h3 class="category-title">Mundo do Entretenimento</h3>
+      <div class="category-progress">
+        <div class="progress-bar" data-progress="0"></div>
+      </div>
+    </div>
+    
+    <div class="category-card" data-category="ciencia">
+      <div class="category-icon"><i class="fas fa-atom"></i></div>
+      <h3 class="category-title">Laboratório Científico</h3>
+      <div class="category-progress">
+        <div class="progress-bar" data-progress="0"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Nova seção para Cursos para Terceira Idade -->
+<div class="categories-section">
+  <h3 class="section-title"><i class="fas fa-heart"></i> Cursos para Terceira Idade</h3>
+  <div class="categories-grid">
+    <div class="category-card" data-category="celular">
+      <div class="category-icon"><i class="fas fa-mobile-alt"></i></div>
+      <h3 class="category-title">Introdução ao Celular Básico</h3>
+      <div class="category-progress">
+        <div class="progress-bar" data-progress="0"></div>
+      </div>
+    </div>
+
+    <div class="category-card" data-category="computador">
+      <div class="category-icon"><i class="fas fa-laptop"></i></div>
+      <h3 class="category-title">Computador para Iniciantes</h3>
+      <div class="category-progress">
+        <div class="progress-bar" data-progress="0"></div>
+      </div>
+    </div>
+
+    <div class="category-card" data-category="internet">
+      <div class="category-icon"><i class="fas fa-shield-alt"></i></div>
+      <h3 class="category-title">Inclusão a Internet Segura</h3>
+      <div class="category-progress">
+        <div class="progress-bar" data-progress="0"></div>
+      </div>
+    </div>
+
+    <div class="category-card" data-category="programacao">
+      <div class="category-icon"><i class="fas fa-code"></i></div>
+      <h3 class="category-title">Programação Básica</h3>
+      <div class="category-progress">
+        <div class="progress-bar" data-progress="0"></div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+          <div class="action-section">
+            <div class="difficulty-section">
+              <h3 class="section-title"><i class="fas fa-chart-line"></i> Selecione o Nível de Desafio</h3>
+              <div class="difficulty-options">
+                <button class="difficulty-btn active" data-difficulty="facil">
+                  <i class="fas fa-seedling"></i>
+                  <span>Iniciante</span>
+                </button>
+                <button class="difficulty-btn" data-difficulty="medio">
+                  <i class="fas fa-mountain"></i>
+                  <span>Intermediário</span>
+                </button>
+                <button class="difficulty-btn" data-difficulty="dificil">
+                  <i class="fas fa-fire"></i>
+                  <span>Especialista</span>
+                </button>
+              </div>
+            </div>
+            
+            <div class="start-btn-container">
+              <button class="start-btn animate__animated animate__pulse animate__infinite">
+                <i class="fas fa-play"></i>
+                <span>Iniciar Desafio</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tela do Quiz -->
+      <section class="screen quiz-screen" id="quizScreen">
+        <div class="quiz-header">
+          <div class="quiz-info">
+            <span class="quiz-category"><i class="fas fa-tag"></i> Conhecimento Geral</span>
+            <span class="quiz-difficulty"><i class="fas fa-seedling"></i> Iniciante</span>
+          </div>
+          <div class="quiz-stats">
+            <div class="time-counter">
+              <span class="time-icon"><i class="fas fa-clock"></i></span>
+              <span class="time-value">30</span>s
+            </div>
+            <div class="score-counter">
+              <span class="score-icon"><i class="fas fa-trophy"></i></span>
+              <span class="score-value">0</span> pts
+            </div>
+          </div>
+        </div>
+        
+        <div class="quiz-progress">
+          <div class="progress-track">
+            <div class="progress-fill"></div>
+          </div>
+          <div class="progress-text">
+            <i class="fas fa-list-ol"></i> Pergunta <span class="current-question">1</span> de <span class="total-questions">10</span>
+          </div>
+        </div>
+        
+        <div class="question-container">
+          <div class="question-decoration">
+            <i class="fas fa-question-circle"></i>
+          </div>
+          <h2 class="question-text">Qual é a capital do Brasil, conhecida por seu planejamento urbano modernista?</h2>
+        </div>
+        
+        <div class="answers-grid">
+          <button class="answer-option">
+            <span class="option-letter">A</span>
+            <span class="option-text">Rio de Janeiro</span>
+          </button>
+          <button class="answer-option">
+            <span class="option-letter">B</span>
+            <span class="option-text">São Paulo</span>
+          </button>
+          <button class="answer-option">
+            <span class="option-letter">C</span>
+            <span class="option-text">Brasília</span>
+          </button>
+          <button class="answer-option">
+            <span class="option-letter">D</span>
+            <span class="option-text">Belo Horizonte</span>
+          </button>
+        </div>
+        
+        <div class="quiz-feedback">
+          <button class="next-question-btn">
+            Próximo Desafio <i class="fas fa-arrow-right"></i>
+          </button>
+        </div>
+      </section>
+
+      <!-- Tela de Resultados -->
+      <section class="screen results-screen" id="resultsScreen">
+        <div class="results-content">
+          <div class="results-header animate__animated animate__bounceIn">
+            <div class="trophy-icon">
+              <i class="fas fa-award"></i>
+            </div>
+            <h2 class="results-title">Missão Cumprida!</h2>
+            <div class="results-score">
+              <span class="score-value">85</span>
+              <span class="score-percent">%</span>
+            </div>
+            <p class="results-subtitle">Você dominou este desafio!</p>
+          </div>
+          
+          <div class="results-details">
+            <div class="result-stats">
+              <div class="stat-item">
+                <div class="stat-icon correct">
+                  <i class="fas fa-check"></i>
+                </div>
+                <span class="stat-value">8</span>
+                <span class="stat-label">Acertos</span>
+              </div>
+              <div class="stat-item">
+                <div class="stat-icon wrong">
+                  <i class="fas fa-times"></i>
+                </div>
+                <span class="stat-value">2</span>
+                <span class="stat-label">Erros</span>
+              </div>
+              <div class="stat-item">
+                <div class="stat-icon points">
+                  <i class="fas fa-star"></i>
+                </div>
+                <span class="stat-value">850</span>
+                <span class="stat-label">Pontos</span>
+              </div>
+            </div>
+            
+                      
+            <div class="results-chart">
+              <h3 class="chart-title"><i class="fas fa-chart-pie"></i> Seu Desempenho</h3>
+              <div class="chart-container">
+                <canvas id="resultsChart"></canvas>
+              </div>
+            </div>
+          </div>
+          
+          <div class="results-actions">
+            <button class="retry-btn">
+              <i class="fas fa-redo"></i> Tentar Novamente
+            </button>
+            <button class="new-quiz-btn">
+              <i class="fas fa-random"></i> Novo Desafio
+            </button>
+            <button class="share-btn">
+              <i class="fas fa-share-alt"></i> Compartilhar
+            </button>
+          </div>
+          
+          <div class="leaderboard">
+            <h3 class="leaderboard-title"><i class="fas fa-medal"></i> Hall da Fama</h3>
+            <ol class="leaderboard-list">
+              <li class="leaderboard-item highlight">
+                <span class="player-rank">1º</span>
+                <span class="player-name">Você</span>
+                <span class="player-score">850 pts</span>
+              </li>
+              <li class="leaderboard-item">
+                <span class="player-rank">2º</span>
+                <span class="player-name">Ana</span>
+                <span class="player-score">800 pts</span>
+              </li>
+              <li class="leaderboard-item">
+                <span class="player-rank">3º</span>
+                <span class="player-name">Carlos</span>
+                <span class="player-score">750 pts</span>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="app-footer">
+      <div class="footer-content">
+        <div class="footer-info">
+          <p><i class="fas fa-code"></i> Desenvolvido por Matheus Brasil</p>
+          <p><i class="fas fa-graduation-cap"></i> Projeto da Imersão Dev Alura 2025</p>
+        </div>
+        <div class="social-links">
+          <a href="https://www.instagram.com/math_br2/" aria-label="Instagram" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/matheus-brasil-8a0528203" aria-label="LinkedIn" target="_blank">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/math4ez" aria-label="GitHub" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
